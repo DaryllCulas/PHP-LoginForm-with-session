@@ -19,7 +19,7 @@ function binarySearch($my_list, $low, $high, $elem)
     return -1;
 }
 $list = [5, 12, 23, 45, 49, 67, 71, 77, 82];
-$num = 67;
+$num = 45;
 $result = binarySearch($list, 0, count($list) - 1, $num);
 if ($result != -1)
   echo "Number $num found at index " . $result;
