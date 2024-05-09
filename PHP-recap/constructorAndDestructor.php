@@ -59,7 +59,3 @@ class Book2
     echo "Title: $this->title"  . PHP_EOL;
   }
 }
-
-$bookObj = new Book2();
-$bookObj->getTitle();
-$bookObj->getPrice();
