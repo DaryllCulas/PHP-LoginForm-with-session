@@ -6,7 +6,7 @@ class Book
   var $title;
 
 
-  public function __construct($param1, $param2)
+  public function __construct(String $param1, int $param2)
   {
     $this->title = $param1;
     $this->price = $param2;
@@ -25,7 +25,7 @@ class Book
 }
 
 
-$obj1 = new Book("PHP Basics", 100);
+$obj1 = new Book("PHP Basics 101", 100);
 $obj2 = new Book("PHP OOP", 200);
 
 $obj1->getTitle();
