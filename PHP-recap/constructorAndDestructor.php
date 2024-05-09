@@ -6,15 +6,15 @@ class Book
   var $title;
 
 
-  public function __construct()
+  public function __construct($param1, $param2)
   {
-    $this->title = "PHP fundamentals";
-    $this->price = 100;
+    $this->title = $param1;
+    $this->price = $param2;
   }
 
   public function getPrice()
   {
-    echo "Price: $this->price";
+    echo "Price: $this->price" . PHP_EOL;
   }
 
 
@@ -25,6 +25,11 @@ class Book
 }
 
 
-$obj1 = new Book;
+$obj1 = new Book("PHP Basics", 100);
+$obj2 = new Book("PHP OOP", 200);
+
 $obj1->getTitle();
 $obj1->getPrice();
+
+$obj2->getTitle();
+$obj2->getPrice();
