@@ -33,3 +33,33 @@ $obj1->getPrice();
 
 $obj2->getTitle();
 $obj2->getPrice();
+
+
+
+class Book2
+{
+
+  private $price;
+  private $title;
+
+
+  public function __construct(String $param1 = "PHP fundamentals 101", int $param2 = 100)
+  {
+    $this->title = $param1;
+    $this->price = $param2;
+  }
+
+  public function getPrice()
+  {
+    echo "Price: $this->price" . PHP_EOL;
+  }
+
+  public function getTitle()
+  {
+    echo "Title: $this->title"  . PHP_EOL;
+  }
+}
+
+$bookObj = new Book2();
+$bookObj->getTitle();
+$bookObj->getPrice();
