@@ -34,16 +34,19 @@ class Books
   function getTitle()
   {
     echo $this->title . PHP_EOL;
+    return $this->title; // Function overriding
   }
 
   function getAuthor()
   {
     echo $this->author . PHP_EOL;
+    return $this->author;
   }
 
   function getPrice()
   {
     echo $this->price . PHP_EOL;
+    return $this->price;
   }
 }
 
