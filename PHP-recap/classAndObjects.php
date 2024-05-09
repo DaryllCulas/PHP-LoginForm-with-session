@@ -40,13 +40,13 @@ class Books
   function getAuthor()
   {
     echo $this->author . PHP_EOL;
-    return $this->author;
+    return $this->author; // Function overriding
   }
 
   function getPrice()
   {
     echo $this->price . PHP_EOL;
-    return $this->price;
+    return $this->price; // Function overriding
   }
 }
 
@@ -81,3 +81,64 @@ $chemistry->getAuthor();
 $physics->getPrice();
 $math->getPrice();
 $chemistry->getPrice();
+
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+
+class Foo
+{
+  public static $my_static = 'fooSHingShao';
+  public function staticValue()
+  {
+    return self::$my_static;
+  }
+}
+
+print Foo::$my_static . "\n";
+$foobar = new Foo();
+print $foobar->staticValue() . "\n";
+
+
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+
+class Name
+{
+
+  var $_firstName;
+  var $_lastName;
+
+  function setName($firstName, $lastName)
+  {
+    $this->_firstName = $firstName;
+    $this->_lastName = $lastName;
+  }
+
+  public function toString()
+  {
+    return $this->_firstName . ' ' . $this->_lastName;
+  }
+}
+
+class NameSub1 extends Name
+{
+  var $_middleInitial;
+
+  function NameSub1($first_name, $last_name, $middle_initial)
+  {
+    Name::setName($first_name, $last_name);
+    $this->_middleInitial = $middle_initial;
+  }
+
+
+  function toString()
+  {
+    return Name::toString() . ' ' . $this->_middleInitial;
+  }
+}
