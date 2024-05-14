@@ -4,6 +4,8 @@
 abstract class marks
 {
   protected int $m1, $m2, $m3;
+
+  // you can change the modifier access here either public or protected
   abstract protected function percent(): float;
 }
 
