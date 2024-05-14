@@ -1,6 +1,6 @@
 <?php
 
-class square
+class squareMeasure
 {
   const PI = M_PI;
   var $side = 5;
@@ -12,6 +12,6 @@ class square
   }
 }
 
-$s1 = new square();
-echo "PI = " . square::PI . PHP_EOL;
+$s1 = new squareMeasure();
+echo "PI = " . squareMeasure::PI . PHP_EOL;
 echo "Area = " . $s1->area() . PHP_EOL;
