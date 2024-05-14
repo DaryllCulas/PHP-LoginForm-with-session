@@ -25,16 +25,6 @@ class Book
 }
 
 
-$obj1 = new Book("PHP Basics 101", 100);
-$obj2 = new Book("PHP OOP", 200);
-
-$obj1->getTitle();
-$obj1->getPrice();
-
-$obj2->getTitle();
-$obj2->getPrice();
-
-
 
 class Book2
 {
@@ -59,3 +49,13 @@ class Book2
     echo "Title: $this->title"  . PHP_EOL;
   }
 }
+
+
+$obj1 = new Book("PHP Basics 101", 100);
+$obj2 = new Book("PHP OOP", 200);
+
+$obj1->getTitle();
+$obj1->getPrice();
+
+$obj2->getTitle();
+$obj2->getPrice();
