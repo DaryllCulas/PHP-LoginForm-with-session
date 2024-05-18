@@ -9,3 +9,8 @@ function formatDollarAmount(float $amount): string
 
   return ($isNegative ? '-' : '') . '$' . number_format(abs($amount), 2);
 }
+
+function formatDate(string $date): string
+{
+  return date('M j, Y', strtotime($date));
+}
