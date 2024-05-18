@@ -11,6 +11,7 @@ define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 
 require APP_PATH . "App.php";
+require APP_PATH . "helpers.php";
 
 $files = getTransactionFiles(FILES_PATH);
 
